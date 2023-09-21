@@ -1,0 +1,57 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="jobseeker.master.cs" Inherits="kavineknaukri.jobseeker_folder.jobseeker" %>
+<%@ Register Src="~/header1.ascx" TagName="myhead" TagPrefix="aa" %>
+<%@ Register Src="~/footer1.ascx" TagName="myfoot" TagPrefix="aa" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+             <table>
+
+                <tr>
+                    <td>
+                        <aa:myhead id="h1" runat="server"></aa:myhead>
+                    </td>
+                </tr>
+          
+                 
+                 <tr>
+                    <td style="background-color:black;text-decoration-color:whitesmoke">
+                       <div id="menu">
+                           <ul class="menu">
+                               <li style="text-decoration-color:aqua"><a href="Homejobseeker.aspx"><span>HOME</span></a>
+                                   <li style="text-decoration-color:aqua"><a href="viewjobs-jobseeker.aspx"><span>VIEW JOBS</span></a>
+                                <li style="text-decoration-color:aqua"><a href="changepasswordjobseeker.aspx"><span>CHANGE-PASSWORD</span></a>
+                                <li style="text-decoration-color:aqua"><a href="logoutjobseeker.aspx"><span>LOGOUT</span></a></li>
+                           </ul>
+                       </div>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td>
+                          <center>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                          </center>
+                    </td>
+                </tr>
+              
+           
+                <tr>
+                    <td>
+                        <aa:myfoot if="f1" runat="server"></aa:myfoot>
+                    </td>
+                </tr>
+            </table>
+          
+        </div>
+    </form>
+</body>
+</html>

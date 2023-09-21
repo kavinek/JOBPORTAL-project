@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="admin.master.cs" Inherits="kavineknaukri.admin_folder.admin" %>
+<%@ Register Src="~/header1.ascx" TagName="myhead" TagPrefix="aa" %>
+<%@ Register Src="~/footer1.ascx" TagName="myfoot" TagPrefix="aa" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+           <table>
+
+                <tr>
+                    <td>
+                        <aa:myhead id="h1" runat="server"></aa:myhead>
+                    </td>
+                </tr>
+          
+                 <tr>
+                    <td style="background-color:pink;text-decoration-color:gold">
+                       <div id="menu">
+                           <ul class="menu">
+                               <li  style="text-decoration-color:gold" ><a href="Homeadmin.aspx"><span>HOME</span></a></li>
+                                <li><a href="#"><span>MASTER DATA</span></a>
+                               
+                               <ul>
+
+                               <li  style="text-decoration-color:gold"><a href="managecountry.aspx"><span>MANAGE COUNTRY</span></a>
+                               <li  style="text-decoration-color:gold"><a href="managestate.aspx"><span>MANAGE STATE</span></a>
+                               <li  style="text-decoration-color:gold"><a href="managecity.aspx"><span>MANAGE CITY</span></a>
+                               <li  style="text-decoration-color:gold"><a href="managegender.aspx"><span>MANAGE GENDER</span></a>
+                               <li  style="text-decoration-color:gold"><a href="managequalification.aspx"><span>MANAGE QUALIFICATION</span></a>
+                               <li  style="text-decoration-color:gold"><a href="managejoblocation.aspx"><span>MANAGE JOB-LOCATION</span></a>
+                               <li  style="text-decoration-color:gold"><a href="managejobprofile.aspx"><span>MANAGE JOB-PROFILE</span></a>
+                               <li  style="text-decoration-color:gold"><a href="managejobprofileskills.aspx"><span>MANAGE JOB-PROFILE SKILLS</span></a>
+                              
+                               </ul>
+                               </li>
+
+                               <li  style="text-decoration-color:gold" ><a href="managejobpost.aspx"><span>MANAGE JOBS</span></a>
+                               <li  style="text-decoration-color:gold"><a href="changepasswordadmin.aspx"><span>CHANGE-PASSWORD</span></a>
+                               <li  style="text-decoration-color:gold"><a href="managejobseeker.aspx"><span>MANAGE JOB-SEEKER</span></a>
+                               <li  style="text-decoration-color:gold"><a href="managejobrecruiter.aspx"><span>MANAGE JOB-RECRUITER</span></a>
+                               <li style="text-decoration-color:gold"><a href="logoutadmin.aspx"><span>LOGOUT</span></a></li>
+                               <%-- <li  style="text-decoration-color:gold"><a href="managehobbies.aspx"><span>MANAGE HOBBIES</span></a>
+                              --%>
+                                 </ul>
+
+                       </div>
+                    </td>
+                </tr> 
+
+                <tr>
+                    <td>
+                          <center>
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                          </center>
+                    </td>
+                </tr>
+              
+           
+                <tr>
+                    <td>
+                        <aa:myfoot if="f1" runat="server"></aa:myfoot>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

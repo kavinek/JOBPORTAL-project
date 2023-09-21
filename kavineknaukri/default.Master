@@ -1,0 +1,64 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="default.master.cs" Inherits="kavineknaukri._default" %>
+<%@ Register Src="~/header1.ascx" TagName="myhead" TagPrefix="aa" %>
+<<%@ Register Src="~/footer1.ascx" TagName="myfoot" TagPrefix="aa" %>
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <script src="jquery.js"></script>
+    <link href="menu.css" rel="stylesheet" />
+    <script src="menu.js"></script>
+
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body style="background-color:rebeccapurple">
+    
+    <form id="form1" runat="server">
+        <div>
+            <table >
+                <center>
+                <tr>
+                    <td>
+                        <aa:myhead id="h1" runat="server"></aa:myhead>
+                    </td>
+                </tr>
+
+                 <tr>
+                    <td style="background-color:black;text-decoration-color:whitesmoke">
+                       <div id="menu">
+                           <ul class="menu">
+                               <li><a href="../jobseeker folder/jobseekermaster.aspx"><span>JOB-SEEKER REGISTRATION</span></a></li>
+                               <li class="last"><a href="../jobrecruiter folder/jobrecruitermaster.aspx"><span>JOB-RECRUITER REGISTRATION</span></a></li>
+                               <li><a href="../login.aspx"><span>LOG-IN</span></a></li>
+                           </ul>
+                       </div>
+                    </td>
+                </tr>
+          
+                
+                <tr>
+                    <td>
+                          
+                          <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                          </asp:ContentPlaceHolder>
+                        
+                    </td>
+                </tr>
+              
+           
+                <tr>
+                    <td>
+                        <aa:myfoot if="f1" runat="server"></aa:myfoot>
+                    </td>
+                </tr>
+                </center>
+            </table>
+            
+        </div>
+    </form>
+</body>
+</html>
